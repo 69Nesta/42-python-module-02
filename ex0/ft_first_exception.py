@@ -1,6 +1,7 @@
 #! python3
 
 def check_temperature(temp_str: str) -> int | None:
+    """Validate a temperature string and report if it suits plant needs."""
     try:
         temp = int(temp_str)
     except ValueError:
@@ -16,12 +17,14 @@ def check_temperature(temp_str: str) -> int | None:
 
 
 def test_input(value: str):
+    """Run a single temperature check with friendly console output."""
     print(f'Testing temperature: \'{value}\'')
     check_temperature(value)
     print('')
 
 
 def test_temperature_input() -> None:
+    """Demonstrate several temperature inputs and their outcomes."""
     print('=== Garden Temperature Checker ===\n')
     test_input("25")
     test_input("abc")
