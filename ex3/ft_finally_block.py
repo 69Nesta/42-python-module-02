@@ -1,6 +1,10 @@
 #! python3
 
 def water_plants(plant_list: list[str]) -> None:
+    '''
+    Waters a list of plants, demonstrating the use of a finally block.
+    :param plant_list: List of plant names to water.
+    '''
     try:
         print('Opening watering system!')
         for plant in plant_list:
@@ -13,6 +17,9 @@ def water_plants(plant_list: list[str]) -> None:
 
 
 def test_watering_system() -> None:
+    '''
+    Tests the watering system with and without errors.
+    '''
     print('=== Garden Watering System ===\n')
     print('Testing normal watering...')
     water_plants(['tomato', 'lettuce', 'carrots'])

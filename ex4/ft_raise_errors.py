@@ -1,6 +1,13 @@
 #! python3
 
-def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int) -> None | str:
+def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int):
+    '''
+    Checks the health of a plant based on its attributes.
+    :param plant_name: Name of the plant.
+    :param water_level: Water level of the plant.
+    :param sunlight_hours: Sunlight hours for the plant.
+    :return: Health status of the plant.
+    '''
     if (not plant_name):
         raise ValueError('Plant name cannot be empty!')
     if (water_level > 10):
@@ -15,6 +22,9 @@ def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int) -
 
 
 def test_plant_checks():
+    '''
+    Runs tests for plant health checks.
+    '''
     print('=== Garden Plant Health Checker ===')
     print('\nTesting good values...')
     try:
@@ -37,7 +47,7 @@ def test_plant_checks():
     except ValueError as e:
         print(f'Error: {e}')
     print('\nAll error raising tests completed!')
-    
+
 
 if __name__ == '__main__':
     test_plant_checks()
